@@ -8,7 +8,7 @@ import { getServerSideUser } from '@/lib/payload-utils'
 import { cookies } from 'next/headers'
 import UserAccountNav from './UserAccountNav'
 import MobileNav from './MobileNav'
-import Amatorus from './Amatorus.png'
+import Amatorus from '../../public/nav/Products/Amatorus.png'
 
 const Navbar = async () => {
   const nextCookies = cookies()
