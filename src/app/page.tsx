@@ -9,7 +9,8 @@ import {
   Stethoscope,
   ShieldCheck,
 } from 'lucide-react'
-import Link from 'next/link'
+import Image from 'next/image';
+import Pills from '../../public/nav/Products/Pills.png'
 
 const perks = [
   {
@@ -36,35 +37,34 @@ export default function Home() {
   return (
     <>
       <MaxWidthWrapper>
-        <div className='py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
-          <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
-            Your marketplace for high-quality{' '}
-            <span className='text-blue-600'>
-              digital assets
-            </span>
-            .
-          </h1>
-          <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
-            Welcome to DigitalHippo. Every asset on our
-            platform is verified by our team to ensure our
-            highest quality standards.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-4 mt-6'>
-            <Link
-              href='/products'
-              className={buttonVariants()}>
-              Browse Trending
-            </Link>
-            <Button variant='ghost'>
-              Our quality promise &rarr;
-            </Button>
-          </div>
-        </div>
+
+      <div className='py-20 px-8 mx-auto flex items-center justify-start bg-purple-300 h-80' style={{ height: '500px', borderTopRightRadius: '170px', gap: '1rem' }}>
+      {/* Text Section */}
+      <div className='flex flex-col items-start w-2/3 px-4'>
+      <p className='mt-6 text-lg max-w-prose'>
+          Welcome to Amatorus.
+        </p>
+        <h1 className='text-2xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
+          Your marketplace for high-quality{' '}
+          <span className='text-purple-800'>
+          Chemical disinfectants and antiseptics
+          </span>
+          .
+        </h1>
+
+
+      </div>
+
+
+      <div className='w-1/4'>
+      <Image src={Pills} alt={"Logo"} height="200" width="200" />
+      </div>
+    </div>
 
         <ProductReel
           query={{ sort: 'desc', limit: 4 }}
           href='/products?sort=recent'
-          title='Brand new'
+          title='Our Products'
         />
       </MaxWidthWrapper>
 

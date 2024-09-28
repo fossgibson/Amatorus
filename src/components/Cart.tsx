@@ -18,6 +18,7 @@ import { useCart } from '@/hooks/use-cart'
 import { ScrollArea } from './ui/scroll-area'
 import CartItem from './CartItem'
 import { useEffect, useState } from 'react'
+import Amatorus from '../../public/nav/Products/Amatorus-Icon.png'
 
 const Cart = () => {
   const { items } = useCart()
@@ -102,11 +103,7 @@ const Cart = () => {
             <div
               aria-hidden='true'
               className='relative mb-4 h-60 w-60 text-muted-foreground'>
-              <Image
-                src='/hippo-empty-cart.png'
-                fill
-                alt='empty shopping cart hippo'
-              />
+      <Image src={Amatorus} alt={"Logo"} height="100" width="100" />
             </div>
             <div className='text-xl font-semibold'>
               Your cart is empty

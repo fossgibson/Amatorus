@@ -53,5 +53,16 @@ export const Orders: CollectionConfig = {
       required: true,
       hasMany: true,
     },
+    {
+      name: 'address',
+      type: 'group', // Use 'group' to contain multiple fields
+      fields: [
+        { name: 'street', type: 'text', required: true },
+        { name: 'city', type: 'text', required: true },
+        { name: 'state', type: 'text', required: true },
+        { name: 'postalCode', type: 'text', required: true },
+        { name: 'country', type: 'text', required: true },
+      ],
+    }
   ],
 }
